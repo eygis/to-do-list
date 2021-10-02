@@ -29,3 +29,12 @@ button {
   text-align: left;
   font-size: 2em;
 }
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deleteX {
+  border: solid 1px black;
+}

@@ -17,8 +17,15 @@ class App extends React.Component {
       tasks: [...this.state.tasks, taskValue]
     })
     document.getElementById("inputArea").reset();
-    console.log(this.state)
-  } 
+    //console.log(this.state)
+  }
+  
+  deleteFunction = (e) => {
+    //console.log(e)
+    this.setState({
+      tasks: this.state.tasks.filter(task => task !== e)
+    })
+    }
   render() {
   return (
    <div id="wrapper">
@@ -27,12 +34,12 @@ class App extends React.Component {
     </div>
     <div id="listArea">
     <form id="inputArea" onSubmit={this.addTask}>
-    <input id="task" type="text" placeholder="input task here!"/>
+    <input id="task" type="text" placeholder="input task here!" required/>
     <button type="submit">Add</button>
     </form>
     <div id="list">
       <ul>
-    {this.state.tasks.map((e) => <li><Pad text={e} /></li>) }
+    {this.state.tasks.map((e) => <li key={e} id={e}><div className="bar"><Pad text={e} /><div className="deleteX" onClick={this.deleteFunction.bind(this, e)}>X</div></div></li>) }
     </ul>
     </div>
     </div>
@@ -46,7 +53,7 @@ class Pad extends React.Component {
   render () {
     const { text } = this.props;
     return (
-      <div class="toDoBlock">
+      <div className="toDoBlock">
         {text}
       </div>
     )
