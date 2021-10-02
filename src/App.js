@@ -7,7 +7,9 @@ class App extends React.Component {
     this.state = {
       tasks: []
     }
+    //this.deleteFunction = this.deleteFunction.bind(this)
   }
+  
   
   addTask = (e) => {
     e.preventDefault()
@@ -39,7 +41,7 @@ class App extends React.Component {
     </form>
     <div id="list">
       <ul>
-    {this.state.tasks.map((e) => <li key={e} id={e}><div className="bar"><Pad text={e} /><div className="deleteX" onClick={this.deleteFunction.bind(this, e)}>X</div></div></li>) }
+    {this.state.tasks.map((e) => <li key={e} id={e}><div className="bar"><Pad text={e} /><div className="deleteX" onClick={() => {this.deleteFunction(e)}}>X</div></div></li>) }
     </ul>
     </div>
     </div>
