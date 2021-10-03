@@ -15,8 +15,14 @@ body {
   border-bottom: solid black;
 }
 
-#listArea {
+#inputArea {
   margin: 125px auto auto auto;
+  text-align: center;
+}
+
+#listArea {
+  display: flex;
+  margin: 10px auto auto auto;
   width: 50%;
   text-align: center;
 }
@@ -26,15 +32,42 @@ button {
 }
 
 #list {
-  text-align: left;
-  font-size: 2em;
+  width: 100%;
 }
 
 .bar {
   display: flex;
-  justify-content: space-between;
+  font-size: 2em;
 }
 
 .deleteX {
   border: solid 1px black;
+  margin: auto;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: red;
+}
+
+.deleteX:hover {
+  cursor: pointer;
+}
+
+#complete {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.yes {
+  border: solid 1px black;
+  margin: auto;
+  margin-right: 0;
+  color: limegreen;
+}
+
+.yes:hover {
+  cursor: pointer;
 }
