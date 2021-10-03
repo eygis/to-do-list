@@ -36,6 +36,13 @@ class App extends React.Component {
       completed: [...this.state.completed, e] 
     })
   }
+
+  clearAll = () => {
+    this.setState({
+      tasks: [],
+      completed: []
+    })
+  }
   render() {
   return (
    <div id="wrapper">
@@ -63,6 +70,7 @@ class App extends React.Component {
     </ul>
     </div>
     </div>
+    <button id="clear" onClick={this.clearAll}>Clear All</button>
     </div>
   );
   }

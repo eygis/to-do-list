@@ -1,6 +1,7 @@
 body {
   background: #828eca;
   font-size: 12px;
+  text-align: center;
 }
 
 #banner {
@@ -25,6 +26,14 @@ body {
   margin: 10px auto auto auto;
   width: 50%;
   text-align: center;
+  border: double 5px white;
+  border-radius: 20px;
+  background: rgb(187, 199, 247);
+  background: linear-gradient(
+    135deg,
+    rgba(187, 199, 247, 1) 0%,
+    rgba(3, 137, 164, 1) 100%
+  );
 }
 
 button {
@@ -57,7 +66,7 @@ button {
 }
 
 h2 {
-  margin-top: 0;
+  margin-top: 5px;
   text-decoration: underline;
 }
 
@@ -70,4 +79,8 @@ h2 {
 
 .yes:hover {
   cursor: pointer;
+}
+
+#clear {
+  margin-top: 5px;
 }
